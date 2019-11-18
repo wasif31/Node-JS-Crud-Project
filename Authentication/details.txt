@@ -1,0 +1,7 @@
+first download nodejs
+
+npm init
+
+npm install express
+
+npm install --save-wasif nodemon mongoose dotenv
