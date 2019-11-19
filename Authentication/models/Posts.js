@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const postModel = mongoose.Schema({
+const postSchema = mongoose.Schema({
 
     title: {
         type: String,
         required: true,
-        min: 3,
-        max: 45
+        min: 6,
+        max: 60
     },
-    post_details: {
+    body: {
         type: String,
         required: true,
         min: 6,
-        max: 1000
+        max: 500
     },
     date: {
         type: Date,
@@ -32,4 +32,4 @@ const postModel = mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('Post', postModel);
+module.exports = mongoose.model('Post', postSchema);

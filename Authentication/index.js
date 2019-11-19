@@ -15,5 +15,5 @@ mongoose.connect(process.env.DB_CONNECT, { useUnifiedTopology: true, useNewUrlPa
 // Middleware
 app.use(express.json());
 app.use('/api/user', authRoute);
-app.use('api/user', postRoute)
+app.use('api/posts', postRoute)
 app.listen(4000, () => console.log('server runing now'));
