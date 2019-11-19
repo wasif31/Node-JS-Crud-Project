@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 //import the route
 const authRoute = require('./auth');
+const postRoute = require('./posts');
 //route middlewire
 dotenv.config();
 // Connecting to Database
@@ -14,4 +15,5 @@ mongoose.connect(process.env.DB_CONNECT, { useUnifiedTopology: true, useNewUrlPa
 // Middleware
 app.use(express.json());
 app.use('/api/user', authRoute);
+app.use('api/user', postRoute)
 app.listen(4000, () => console.log('server runing now'));
